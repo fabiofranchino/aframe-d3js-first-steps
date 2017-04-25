@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>03</title>
+    <meta name="viewport" content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0' />
+
+    <!-- build:css build.css -->
+    <link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+    <!-- endbuild -->
+
+    <!-- build:js build.js -->
+    <script type="text/javascript" src="node_modules/aframe/dist/aframe-master.js"></script>
+    <script type="text/javascript" src="node_modules/aframe-animation-component/dist/aframe-animation-component.js"></script>
+    <script type="text/javascript" src="node_modules/d3/build/d3.js"></script>
+    <!-- endbuild -->
+</head>
+<body>
+
+    <a-scene>
+
+        <a-entity id="en">
+
+            <a-box color="red" width="2" height="2" rotation="0 0 0" position="0 2 -5">
+                
+                <a-animation direction="alternate" attribute="rotation" to="0 360 360" dur="4000" repeat="5" easing="linear"></a-animation>
+            </a-box>
+
+            <a-animation direction="alternate" attribute="position" to="0 0 -20" dur="2000" repeat="5" easing="linear"></a-animation>
+        </a-entity>
+
+    </a-scene>
+
+
+    <script type="text/javascript" src="03.js"></script>
+
+</body>
+</html>

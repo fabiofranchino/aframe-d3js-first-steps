@@ -1,0 +1,1 @@
+!function(){var a=document.querySelector("a-box");a.addEventListener("mouseenter",function(){a.setAttribute("scale",{x:2,y:2,z:2})}),a.addEventListener("mouseleave",function(){a.setAttribute("scale",{x:1,y:1,z:1})})}();
