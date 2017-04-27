@@ -9,13 +9,13 @@
     .enter()
     .append('a-entity')
     .attr('rotation', function (d, i) {
-      var a = 360 / data.length
-      return '0 ' + a * i + ' 0'
+      var a = 90 / data.length
+      return '0 ' + (a * i - 45) + ' 0'
     })
 
     .append('a-plane')
     .attr('material', 'color:red;side:double;transparent:true;opacity:1;')
-    .attr('width', 1.5)
+    .attr('width', 0.4)
     .attr('height', function (d, i) {
       return d.v
     })
@@ -23,8 +23,9 @@
       return '0 ' + d.v / 2 + ' -5'
     })
     .attr('animation', function (d, i) {
-      var a = 360 / data.length
-      var f = 360 + a * i
-      return 'property:rotation;to:' + f + ' 0 0;dur:10000;easing:linear'
+      var a = 180 / data.length
+      var f = 180 + a * i
+      var t = 5000 + Math.random() * 5000
+      return 'property:rotation;to:360 0 0;dur:' + t + ';easing:easeInOutElastic;loop:true'
     })
 })(window.d3)
